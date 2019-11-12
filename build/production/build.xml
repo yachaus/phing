@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="php3" default="build" basedir=".">
+
+    <target name="vars">
+        <resolvepath propertyName="target.dir" path="/Applications/MAMP/htdocs/phing"/>
+        <echo msg="Source dir: ${project.basedir}"/>
+        <echo msg="Target dir: ${target.dir}"/>
+    </target>
+
+    <target name="copy">
+        <copy todir="${target.dir}">
+            <fileset dir="${project.basedir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="build" depends="vars, copy"></target>
+</project>
