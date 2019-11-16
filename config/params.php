@@ -3,6 +3,7 @@
 return [
     'adminEmail' => 'admin@example.com',
     'senderEmail' => 'noreply@example.com',
-    'senderName' => 'Example.com mailer',
-    'domain' => 'php3.loc'
+    'senderName' => '{{Example.com mailer}}',
+    'domain' => '{{domain}}'
 ];
+
