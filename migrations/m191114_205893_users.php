@@ -15,7 +15,9 @@ class m191114_205893_users extends Migration
     {
         $this->createTable('users',[
             'id' => $this->primaryKey(),
-            'name' => $this->string(20),
+            'first_name' => $this->string(20),
+            'last_name' => $this->string(20),
+            'middle_name' => $this->string(20),
             'email' => $this->string(50),
             'role' => $this->integer()
         ]);
@@ -27,9 +29,27 @@ class m191114_205893_users extends Migration
             'id');
 
         $this->insert('users', [
-            'name' => 'Nikita',
+            'first_name' => 'Nikita',
+            'middle_name' => 'Mychaylovich',
+            'last_name' => 'Chaus',
             'email' => 'nikita.chaus68@gmail.com',
             'role' => '1'
+        ]);
+
+        $this->insert('users', [
+            'first_name' => 'Ivan',
+            'middle_name' => '',
+            'last_name' => 'Chaus',
+            'email' => 'ivan.chaus68@gmail.com',
+            'role' => '2'
+        ]);
+
+        $this->insert('users', [
+            'first_name' => '',
+            'middle_name' => '',
+            'last_name' => '',
+            'email' => '68@gmail.com',
+            'role' => '2'
         ]);
 
     }
